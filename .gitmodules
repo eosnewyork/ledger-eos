@@ -1,0 +1,6 @@
+[submodule "src/eos-app"]
+	path = src/eos-app
+	url = git@github.com:LedgerHQ/ledger-app-eos.git
+[submodule "deps/nanos-secure-sdk"]
+	path = deps/nanos-secure-sdk
+	url = git@github.com:LedgerHQ/nanos-secure-sdk.git
