@@ -4,13 +4,11 @@
 
 This project wraps the Ledger Nano S app for EOS and provides continuous integration via CircleCI.
 
-An artifact (zip) containing a compile app package will be created for each PR.
+An artifact (zip) containing a compiled app will be created for each commit.
 
 **WARNING: Remember to use this ONLY in a ledger without funds and only for testing purposes.**
 
 ## Installing
-
-There are two ways you can install the app:
 
 ### Getting the package
 
