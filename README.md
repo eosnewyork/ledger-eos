@@ -20,10 +20,21 @@ There are two ways you can get the package. (*This workflow will be improved in 
 
 Go to CircleCI dashboard https://circleci.com/gh/ZondaX/ledger-eos
 
+Go to the latest build and click in `build_all`
+
+![alt text](docs/builds.png)
+
+You will see the build job dependencies. Click in `package_app`
+
+![alt text](docs/tree.png)
+
+Now, go to artifacts. Expand the container directory until you find the `pkgapp.zip` file and download it.
+
+![alt text](docs/artifact.png)
 
 
 
-#### Option 2. Use REST API and get the directly link
+#### Option 2. Use REST API and get a the directly link to the latest package
 
 Click in the following link
 
