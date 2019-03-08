@@ -62,3 +62,5 @@ Download the zip file from the URL you get back.
    - Because the app is a development build and it has not been signed by ledger, it will tell you that the app is not trusted
    - NEVER INSTALL THIS APP IN A LEDGER WITH FUNDS. USE A TEST LEDGER FOR DEVELOPMENT PURPOSES 
    - accept and install
+
+**The app will be named EosDemo with version 0.0.0. This is intentional**
