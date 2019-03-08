@@ -36,7 +36,7 @@ jobs:
       - run: make -C src/eos-app
       - run: make -C src/pkgapp
       - run: sudo apt-get -y install zip
-      - run: zip -r pkgapp.zip /root/project/pkgapp
+      - run: zip -jr pkgapp.zip /root/project/pkgapp
       - store_artifacts:
           path: pkgapp.zip
 
@@ -46,7 +46,7 @@ workflows:
     jobs:
       - build
       - build_app
-      - package_demo:
+      - package_app:
           requires:
             - build
             - build_app

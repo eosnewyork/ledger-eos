@@ -29,12 +29,25 @@ TARGET_ID=0x31100004
 DATASIZE=$(cat ${APP_DIR}/debug/app.map |grep _nvram_data_size | tr -s ' ' | cut -f2 -d' ')
 ICONHEX=$(python ${BOLOS_SDK}/icon.py ${APP_DIR}/${ICONNAME} hexbitmaponly)
 
-cat >${PKG_DIR}/loadapp.sh <<EOL
+cat >${PKG_DIR}/loadapp.sh <<'EOL'
 #!/usr/bin/env bash
-pip install -U setuptools ledgerblue
+if command -v python3 &>/dev/null; then
+    echo Python 3 detected
+else
+    echo Python 3 is required
+    exit 1
+fi
 
-SCRIPT_DIR=\$(cd \$(dirname \$0) && pwd)
-python -m ledgerblue.loadApp --appFlags 0x40 --tlv --targetId ${TARGET_ID} --delete --fileName \${SCRIPT_DIR}/app.hex --appName ${APPNAME} --appVersion ${APPVERSION} --icon ${ICONHEX} --dataSize ${DATASIZE}
+#Create temporary venv
+INSTALL_SCRIPT_DIR=$(cd $(dirname $0) && pwd)
+python3 -m venv ${INSTALL_SCRIPT_DIR}/temp
+source ${INSTALL_SCRIPT_DIR}/temp/bin/activate
+
+#Install python dependencies
+pip3 install -U setuptools ledgerblue
+
+# Run installation script
+python3 -m ledgerblue.loadApp --appFlags 0x40 --tlv --targetId 0x31100004 --delete --fileName ${INSTALL_SCRIPT_DIR}/app.hex --appName EosDemo --appVersion 0.0.0 --icon 0100000000ffffff00ffffffffffff7ffebffddffbeff7eff7d7ebb7edb7ed6ff61ff8ffffffffffff --dataSize 0x00000040
 EOL
 
 chmod +x ${PKG_DIR}/loadapp.sh
