@@ -12,28 +12,6 @@ An artifact (zip) containing a compiled app will be created for each commit.
 
 ### Getting the package
 
-There are two ways you can get the package. (*This workflow will be improved in the future*)
-
-#### Option 1. via CircleCI Dashboard
-
-Go to CircleCI dashboard https://circleci.com/gh/ZondaX/ledger-eos
-
-Go to the latest build and click in `build_all`
-
-![alt text](docs/builds.png)
-
-You will see the build job dependencies. Click in `package_app`
-
-![alt text](docs/tree.png)
-
-Now, go to artifacts. Expand the container directory until you find the `pkgapp.zip` file and download it.
-
-![alt text](docs/artifact.png)
-
-
-
-#### Option 2. Use REST API and get a the directly link to the latest package
-
 Click in the following link
 
 https://circleci.com/api/v1.1/project/github/ZondaX/ledger-eos/latest/artifacts
