@@ -1,6 +1,6 @@
 # Ledger EOS (Integration Repo)
 
-[![CircleCI](https://circleci.com/gh/ZondaX/ledger-eos.svg?style=svg)](https://circleci.com/gh/ZondaX/ledger-eos) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CircleCI](https://circleci.com/gh/eosnewyork/ledger-eos.svg?style=svg)](https://circleci.com/gh/eosnewyork/ledger-eos) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 This project wraps the Ledger Nano S app for EOS and provides continuous integration via CircleCI.
 
