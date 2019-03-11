@@ -14,7 +14,7 @@ An artifact (zip) containing a compiled app will be created for each commit.
 
 Click in the following link
 
-https://circleci.com/api/v1.1/project/github/ZondaX/ledger-eos/latest/artifacts
+https://circleci.com/api/v1.1/project/github/eosnewyork/ledger-eos/latest/artifacts
 
 This will return something similar to:
 
